@@ -26,13 +26,13 @@ SECRET_KEY = 'qow=7datpfy#e3e4)u-st$7cz%1(4ph4p+y0vgt4&(zs8@be=p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -78,10 +78,14 @@ WSGI_APPLICATION = 'MyDjangoTemp2.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default': 
+        {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'MyDatabase',
+        'USER': 'postgres',
+        'PASSWORD': 'Dolly@123',
+        'HOST': 'localhost',
+        }
 }
 
 
